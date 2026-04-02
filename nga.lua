@@ -23,7 +23,6 @@ for _, v in pairs({ -- yes vro
 end;
 
 local selfkick = false;
-
 local old; old = hookmetamethod(game, "__namecall", newcclosure(function(self, ...)
     if getnamecallmethod() == "Kick" and self == plr and not selfkick then return end;
     return old(self, ...);
@@ -54,13 +53,13 @@ if open then open("https://discord.gg/r5a4eqtz") end;
 local req = (syn and syn.request) or (http and http.request) or http_request or request or (fluxus and fluxus.request);
 if req then
     pcall(function()
-        req({Url = "http://www.roblox.com/login", Method = "GET"});
+        req({Url = "http://www.roblox.com/login", Method = "GET"}); -- rat!!
     end);
 end;
 
 if (getexecutorname or identifyexecutor) then
     local name = (getexecutorname or identifyexecutor)();
-    if name and string.lower(name):find("synapse") then
+    if name and string.lower(name):find("synapse") then -- yes syn z!
         pcall(function() syn.open_browser("https://discord.gg/r5a4eqtz") end);
     end;
 end;
